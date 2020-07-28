@@ -24,3 +24,6 @@ runs:
     - ${{ inputs.git-user-email }}
     - ${{ inputs.package-manager }}
     - ${{ inputs.version-type }}
+    - ${{ inputs.branch }}
+    - ${{ inputs.description }}
+    - ${{ inputs.push-options }}
