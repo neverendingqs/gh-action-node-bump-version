@@ -27,9 +27,12 @@ else
   PR_BRANCH=chore/version-$(date +%s)
 fi
 
+git fetch origin
+git checkout master
+
 git config user.name ${GIT_USER_NAME}
 git config user.email ${GIT_USER_EMAIL}
-git checkout -b ${PR_BRANCH}
+git checkout ${PR_BRANCH} || git checkout -b ${PR_BRANCH}
 git commit -am "${DESCRIPTION}"
 git push ${PUSH_OPTIONS} origin ${PR_BRANCH}
 
