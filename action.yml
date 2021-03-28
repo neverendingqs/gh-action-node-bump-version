@@ -16,6 +16,8 @@ inputs:
   version-type:
     description: Bumps the package version based on value (e.g. patch)
     default: patch
+  base-branch:
+    description: Pull request base branch.
   branch:
     description: Name of the branch to push changes
   description:
@@ -30,6 +32,7 @@ runs:
     - ${{ inputs.git-user-email }}
     - ${{ inputs.package-manager }}
     - ${{ inputs.version-type }}
+    - ${{ inputs.base-branch }}
     - ${{ inputs.branch }}
     - ${{ inputs.description }}
     - ${{ inputs.push-options }}
